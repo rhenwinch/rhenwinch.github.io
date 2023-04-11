@@ -1,5 +1,3 @@
-const SCROLL_SENSITIVITY = 1; // Change this value as needed
-
 // Delay time for resetting scrolling flag (in milliseconds)
 const DELAY_TIME = 200;
 const SLIDE_DELAY = 200;
@@ -9,23 +7,28 @@ let isScrolling = false;
 
 // DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
-    handleSlideTransitions(); // Run this once so we load all our elements
-
     // Get all sections
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll('nav ul li');
     const dotItems = document.querySelectorAll('.tab-indicator span');
 
+    // Initialize functions
+    handleSlideTransitions();
+    handleNavClick();
+
+
     // Initialize current index and first view
     var currentIndex = 0;
-    sections[currentIndex].scrollIntoView({ behavior: "smooth" });
+    scrollToSection(currentIndex);
 
-    window.addEventListener('scroll', handleSlideTransitions);
+    window.addEventListener('scroll', () => {
+        handleSlideTransitions();
+        handleFooter();
+    });
 
     // Wheel event listener
     document.addEventListener("wheel", (event) => {
         if (!isScrolling) {
-            event.preventDefault();
             handleScroll(event.deltaY);
         }
     });
@@ -34,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("touchstart", (event) => {
         if (!isScrolling) {
             touchStartY = event.touches[0].clientY;
-            handleFooter(currentIndex);
         }
     });
 
@@ -45,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const touchEndY = event.touches[0].clientY;
             const deltaY = touchStartY - touchEndY;
             handleScroll(deltaY);
-            handleFooter(currentIndex);
         }
     });
 
@@ -56,16 +57,28 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.key === "ArrowDown" || event.key === "PageDown") {
                 event.preventDefault();
                 handleScroll(1);
-                handleFooter(currentIndex);
             }
             // Check if key is ArrowUp
             else if (event.key === "ArrowUp" || event.key === "PageUp") {
                 event.preventDefault();
                 handleScroll(-1);
-                handleFooter(currentIndex);
             }
         }
     });
+
+    function handleFooter(totalViews = 5) {
+
+        let display = 'none';
+        try {
+            const isOnLastNavItem = currentIndex === totalViews - 1;
+
+            // Show the footer if on last page
+            if (isOnLastNavItem)
+                display = 'block';
+        } catch (error) { }
+
+        document.querySelector('.footer-container').style.display = display
+    }
 
     function handleSlideTransitions() {
         const slideLeftElements = document.querySelectorAll('.slide-left');
@@ -131,13 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function handleFooter(currentPageIndex, totalPages = 5) {
-        const isOnLastNavItem = currentPageIndex === totalPages - 1;
-    
-        // Show the footer if on last page
-        document.querySelector('.footer-container').style.display = isOnLastNavItem ? 'block' : 'none';
-    }
-
     // Function to handle scrolling
     function handleScroll(deltaY) {
         // If scrolling is in progress, return
@@ -147,18 +153,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check if scrolling down
         if (deltaY > 0) {
-            currentIndex = Math.min(currentIndex + SCROLL_SENSITIVITY, sections.length - 1);
+            currentIndex = Math.min(currentIndex + 1, sections.length - 1);
         }
         // Check if scrolling up
         else if (deltaY < 0) {
-            currentIndex = Math.max(currentIndex - SCROLL_SENSITIVITY, 0);
+            currentIndex = Math.max(currentIndex - 1, 0);
         }
 
         // Set scrolling flag to true
         isScrolling = true;
 
         // Scroll to the next section
-        sections[currentIndex].scrollIntoView({ behavior: "smooth" });
+        scrollToSection(currentIndex);
         navItems.forEach((item, j) => {
             item.classList.remove('active');
             dotItems[j].classList.remove('active');
@@ -170,5 +176,55 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             isScrolling = false;
         }, DELAY_TIME);
-    };
+    }
+
+    function handleNavClick() {
+        // Add click event listener to each nav item
+        navItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                const sectionIndex = item.children[0].getAttribute('data-section');
+
+                // Remove the 'active' class from all nav items and dot items
+                navItems.forEach((item, j) => {
+                    item.classList.remove('active');
+                    dotItems[j].classList.remove('active');
+                });
+
+                // Add the 'active' class to the clicked nav item and dot item
+                item.classList.add('active');
+                dotItems[i].classList.add('active');
+
+                currentIndex = sectionIndex - 1;
+                scrollToSection(currentIndex);
+            });
+        });
+
+        // Add click event listener to each dot item
+        dotItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                const sectionIndex = item.getAttribute('data-section');
+
+                // Remove the 'active' class from all nav items and dot items
+                dotItems.forEach((item, j) => {
+                    item.classList.remove('active');
+                    navItems[j].classList.remove('active');
+                });
+
+                // Add the 'active' class to the clicked nav item and dot item
+                item.classList.add('active');
+                navItems[i].classList.add('active');
+
+                currentIndex = sectionIndex - 1;
+                scrollToSection();
+            });
+        });
+    }
+
+    // Function to scroll to a section with smooth behavior
+	function scrollToSection(index) {
+        sections[index]
+            .scrollIntoView({
+                behavior: "smooth" 
+            });
+	}
 });
