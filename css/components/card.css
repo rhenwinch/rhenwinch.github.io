@@ -1,0 +1,55 @@
+/* CSS */
+.card {
+    position: var(--card-position, absolute);
+    background-color: var(--md-sys-color-surface-1);
+    border-radius: var(--card-border-radius, 0);
+    box-shadow: var(--md-sys-elevation-2);
+    max-width: var(--card-width, 300);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--card-border-radius, 0);
+}
+
+.card-content.notice-card {
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.card-content.normal-card {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-background);
+}
+
+.card-text-content {
+    padding: 25px;
+}
+
+.card-text-content>* {
+    margin: auto;
+    padding: 2px;
+}
+
+.md-card-footer {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.md-card-link {
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+.md-card-link:hover {
+    text-decoration: underline;
+}

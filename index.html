@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="author" content="Sheinn D. Reyes">
+	<title>My Place</title>
+	<!-- Include Material3 CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/@material/textfield/dist/mdc.textfield.min.css">
+	<link rel="stylesheet" href="/css/theme/theme.light.css" id="themeStylesheet">
+	<link rel="stylesheet" href="/css/theme/theme.css">
+
+	<!-- Icons -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body class="surface">
+	<div class="container">
+		<nav class="navbar on-secondary-text label-large">
+			<ul class="nav-list">
+				<li class="nav-item active">
+					<a class="nav-link clickable" data-section="1">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link clickable" data-section="2">About Me</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link clickable" data-section="3">My Interests</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link clickable" data-section="4">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link clickable" data-section="5">Contact Me</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Headliner Screen -->
+		<section id="headliner">
+			<div class="headliner-wrapper">
+				<!-- Card -->
+				<div class="card slide-left" style="top: 35vh; left: 15%; --card-border-radius: 25px">
+					<div class="card-content notice-card">
+						<img src="/images/icon.png" alt="Icon Image" class="card-icon">
+						<div class="card-text-content" style="padding-left: 10px;">
+							<p class="title-medium roboto-light">Hello, I am</p>
+							<h2 class="display-large roboto-medium">Rhen!</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="card slide-right" style="top: 70vh; left: 68%; --card-border-radius: 25px">
+					<div class="card-content notice-card">
+						<div class="card-text-content">
+							<p class="body-medium uppercase roboto-light">Native Android Developer</p>
+							<p class="body-medium uppercase roboto-light">Backend Developer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Me Screen -->
+		<section id="about">
+			<div class="about-me-wrapper">
+				<div class="slide-down">
+					<img id="about-me-dynamic-image" alt="About Me">
+				</div>
+				<div class="about-me-text display-small roboto-black uppercase on-surface-text slide-left"
+					style="filter: drop-shadow(4px 5px 0 var(--md-sys-color-tertiary-container));">
+					<h1>About Me</h1>
+				</div>
+				<div class="about-me-text title-large on-surface-text slide-left">
+					<p>Hello, I'm <span class="roboto-medium">Rhen</span>!</p>
+
+					<p>I'm a native android developer with a strong passion for creating innovative softwares. I've been
+						programming for the past 4 years and have honed my skills as a self-taught programmer while
+						maintaining consistent honor student status.</p>
+
+					<p>I take pride in crafting apps that captivate users and bring value to their lives. Along with my
+						expertise in backend development, I offer a comprehensive skill set to develop end-to-end
+						solutions. I particularly enjoy object-oriented programming and constantly strive to learn and
+						apply clean code and design principles in my work.</p>
+
+					<p>Despite my young age of 19, I'm determined to make my mark in the tech world and am currently
+						seeking an exciting job opportunity. If you're in need of a skilled and enthusiastic developer,
+						I'm your go-to person! Let's join forces and create some remarkable software together!</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- My Interests Screen -->
+		<section id="interests">
+			<div class="interests-wrapper">
+				<div class="interests-header slide-up display-small uppercase on-surface-text"
+					style="filter: drop-shadow(4px 5px 0 var(--md-sys-color-tertiary-container));">
+					<h1>Interests</h1>
+				</div>
+				<div class="interests-container">
+					<div class="interest-row">
+						<div class="card slide-up" style="--card-border-radius: 25px; width: 300px">
+							<div class="card-content normal-card">
+								<div class="card-text-content interest-item">
+									<img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png"
+										alt="Android Icon">
+									<h1 class="title-large roboto-medium on-surface-text">Coding</h1>
+									<p class="body-large roboto-light on-surface-text">I enjoy the process of coding and
+										solving complex problems, as it requires logical thinking and creativity.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="interest-row">
+						<div class="card slide-down" style="--card-border-radius: 25px; width: 300px">
+							<div class="card-content normal-card">
+								<div class="card-text-content interest-item">
+									<img src="https://static.vecteezy.com/system/resources/previews/001/200/152/non_2x/reading-png.png"
+										alt="Android Icon">
+									<h1 class="title-large roboto-medium on-surface-text">Reading</h1>
+									<p class="body-large roboto-light on-surface-text">I love reading, always eager to
+										explore new books, articles, and resources to broaden my knowledge and immerse
+										myself in captivating stories or insightful topics.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="interest-row">
+						<div class="card slide-up" style="--card-border-radius: 25px; width: 300px">
+							<div class="card-content normal-card">
+								<div class="card-text-content interest-item">
+									<img src="https://cdn-icons-png.flaticon.com/512/3844/3844724.png"
+										alt="Android Icon">
+									<h1 class="title-large roboto-medium on-surface-text">Music</h1>
+									<p class="body-large roboto-light on-surface-text">I'm a music enthusiast! Music is one of the best source of joy, inspiration, and self-expression for me.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Skills Screen -->
+		<section id="skills">
+			<div class="skills-wrapper">
+				<div class="skills-header display-small on-surface-text slide-left">
+					<h1 class="uppercase"
+						style="filter: drop-shadow(4px 5px 0 var(--md-sys-color-tertiary-container));">Skills</h1>
+					<a class="link roboto-light on-surface-text"" href="https://github.com/rhenwinch" style="filter: drop-shadow(4px 5px 0 var(--md-sys-color-tertiary-container));" target="_blank">
+						<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" class="invert" style="width: 80px; height: 100%;">
+					</a>
+					<p class="title-small roboto-medium on-surface-text">My repository</p>
+					<p class="title-small italic roboto-light on-surface-text">"Please note that some of my projects may
+						not be publicly showcased due to legal restrictions and agreements."</p>
+				</div>
+				<div class="skills-container slide-down">
+					<div class="card skills-card active" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+								class="card-icon" style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">"Kotlin has been my favorite
+									language since 2021. It's introduced me to a new level of programming, with modern
+									syntax, architectural principles, and design patterns. I've used it to create a
+									Movie Logger app and an Android game based on a popular web game for my repository.
+									Kotlin's versatility make it a joy to work with, and I'm excited to explore more of
+									its capabilities in future skills."</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://seeklogo.com/images/O/ottawa-js-logo-394DB38073-seeklogo.com.png"
+								alt="Icon Image" class="card-icon"
+								style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">"I have extensive experience in
+									JavaScript (JS), with a focus on skills involving Node.js. This has allowed me to
+									develop expertise in building comissioned automated bots, NFT generators, and
+									websites on various web technologies."</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+								alt="Python" class="card-icon"
+								style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">"I love using Python for my
+									skills, especially when it comes to automating things. Python's versatility and
+									user-friendly syntax make it a perfect fit for automating repetitive tasks and
+									processing data. Recently, I've been exploring computer vision with OpenCV, which
+									has been a super interesting area to dive into!"</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://avatars.githubusercontent.com/u/25158?s=280&v=4" alt="PHP"
+								class="card-icon" style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">"I've worked with PHP on comissioned
+									skills involving local SQL databases, custom backends, and complex website
+									functionalities. I've enjoyed leveraging PHP's versatility and extensive libraries
+									to deliver efficient and reliable web applications."</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png"
+								alt="C" class="card-icon"
+								style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">"I enjoy coding in C and recently
+									built a Tetris game with it. Most of my C skills are school assignments, but I
+									love the versatility and power of this language. C is widely used in systems
+									programming, embedded systems, and game development. Always eager to learn and push
+									my boundaries with C!"</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card" style="--card-border-radius: 25px; width: 800px;">
+						<div class="card-content normal-card" style="padding: 30px;">
+							<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"
+								class="card-icon" style="max-width: 200px; margin-left: 15px; margin-right: 15px;">
+							<div class="card-text-content" style="padding-left: 10px;">
+								<p class="title-large roboto-light on-surface-text">Java is awesome! I recently built a
+									handy commute helper software using a popular backend service, and gave it a slick
+									UI for a smoother experience. It's been a game-changer for my daily jeep and bus
+									rides. Java's versatility and power make it a blast to work with for creating
+									practical solutions to real-world challenges.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="skills-icon-container slide-up">
+					<div class="skills-icon-item">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+							id="skills-btn" class="clickable">
+					</div>
+					<div class="skills-icon-item">
+						<img src="https://seeklogo.com/images/O/ottawa-js-logo-394DB38073-seeklogo.com.png"
+							alt="JavaScript" id="skills-btn" class="clickable">
+					</div>
+					<div class="skills-icon-item">
+						<img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+							alt="Python" id="skills-btn" class="clickable">
+					</div>
+					<div class="skills-icon-item">
+						<img src="https://avatars.githubusercontent.com/u/25158?s=280&v=4" alt="PHP" id="skills-btn"
+							class="clickable">
+					</div>
+					<div class="skills-icon-item">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png"
+							alt="C" id="skills-btn" class="clickable">
+					</div>
+					<div class="skills-icon-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java" id="skills-btn"
+							class="clickable">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Me Screen -->
+		<section id="contact-me">
+			<div class="contact-me-wrapper">
+				<div class="contact-me-header slide-up display-small uppercase on-surface-text"
+					style="filter: drop-shadow(4px 5px 0 var(--md-sys-color-tertiary-container));">
+					<h1>Let's get in touch!</h1>
+				</div>
+				<div class="form-container">
+					<form>
+						<div class="form-row slide-left">
+							<div class="textfield-container">
+								<input type="text" class="textfield-input" placeholder=" ">
+								<label class="textfield-label">Name</label>
+								<div class="textfield-underline"></div>
+							</div>
+							<div class="textfield-container">
+								<input type="email" class="textfield-input" placeholder=" ">
+								<label class="textfield-label">Email</label>
+								<div class="textfield-underline"></div>
+							</div>
+						</div>
+						<div class="textfield-container slide-right" style="margin-top: 2rem;">
+							<textarea class="textfield-input" placeholder=" "></textarea>
+							<label class="textfield-label">Message</label>
+							<div class="textfield-underline"></div>
+						</div>
+						<button type="submit" class="submit-button label-large roboto-medium slide-down">Send Message</button>
+					</form>
+				</div>
+		</section>
+
+		<footer class="footer-container">
+			<!-- Social Logos -->
+			<div class="footer-row">
+				<!-- Small logo 1 -->
+				<a target="_blank" href="https://www.facebook.com/rhenwinch">
+					<img src="https://www.out-sport.eu/wp-content/uploads/2017/04/images-facebook-f-logo-png-transparent-background-page-2-29.png" alt="Facebook" class="footer-logo invert">
+				</a>
+				<!-- Small logo 2 -->
+				<a target="_blank" href="https://www.instagram.com/rhenwinch/">
+					<img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png"
+						alt="Instagram" class="footer-logo invert"">
+				</a>
+				<!-- Small logo 3 -->
+				<a href="mailto:rhenwinchester@gmail.com">
+					<img src="https://www.pngkit.com/png/full/222-2226274_white-email-icon-png-download-mail-symbol-png.png"
+						alt="Gmail" class="footer-logo invert"">
+				</a>
+				<!-- Add more small logos as needed -->
+			</div>
+			<div class="footer-content">
+				<p>Ryrhen Christian Aranes.</p>
+				<p>© 2023 • All rights reserved </p>
+			</div>
+		</footer>
+
+		<nav class="nav-tabs">
+			<div class="tab-indicator">
+				<span class="dot clickable active" data-section="1"></span>
+				<span class="dot clickable" data-section="2"></span>
+				<span class="dot clickable" data-section="3"></span>
+				<span class="dot clickable" data-section="4"></span>
+				<span class="dot clickable" data-section="5"></span>
+			</div>
+		</nav>
+
+		<div class="fab clickable tertiary-container">
+			<span id="toggleTheme" class="material-symbols-outlined on-tertiary-container-text"
+				style="padding: 10px">dark_mode</span>
+		</div>
+
+	</div>
+</body>
+<script src="/script/navbar.js"></script>
+<script src="/script/scroll.js"></script>
+<script src="/script/theme.js"></script>
+<script src="/script/skills-cards.js"></script>
+<script src="https://unpkg.com/@material/textfield"></script>
+
+</html>

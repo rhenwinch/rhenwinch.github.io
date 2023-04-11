@@ -1,0 +1,61 @@
+.footer-container {
+    display: none;
+    background-color: var(--md-sys-color-secondary);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation-name: slide-in;
+    /* Set the animation name */
+    animation-duration: 1s;
+    /* Set the animation duration */
+    animation-timing-function: ease-in-out;
+    /* Set the animation timing function */
+    animation-fill-mode: forwards;
+    /* Keep the final state of the animation */
+}
+
+/* Content within the footer */
+.footer-content {
+    color: var(--md-sys-color-on-secondary);
+}
+
+/* Content within the footer */
+.footer-content>p {
+    line-height: 5px;
+}
+
+/* Styles for row div inside footer */
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styles for small logos */
+.footer-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Animation keyframes */
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        /* Set the initial position to slide from bottom */
+        opacity: 0;
+        /* Set the initial opacity to 0 */
+    }
+
+    to {
+        transform: translateY(0);
+        /* Set the final position to slide to top */
+        opacity: 1;
+        /* Set the final opacity to 1 */
+    }
+}

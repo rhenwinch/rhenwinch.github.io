@@ -1,0 +1,9 @@
+.fab {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--fab-border-radius, 100%);
+}

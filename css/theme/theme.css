@@ -1,0 +1,26 @@
+@import url(tokens.css);
+@import url(colors.module.css);
+@import url(typography.module.css);
+/* @import url(theme.light.css) (prefers-color-scheme: light);
+@import url(theme.dark.css) (prefers-color-scheme: dark); */
+@import url("../components/common.css");
+@import url("../components/navbar.css");
+@import url("../components/section.css");
+@import url("../components/card.css");
+@import url("../components/fab.css");
+@import url("../components/dot-indicator.css");
+@import url("../components/textfield.css");
+@import url("../components/footer.css");
+@import url("../components/anim.css");
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    /* Add margin-top to create space for the navbar */
+    margin-top: 60px;
+}
