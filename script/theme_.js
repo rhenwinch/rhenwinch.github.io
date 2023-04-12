@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const aboutMeImage = document.getElementById('about-me-dynamic-image');
+    aboutMeImage.src = 'https://rhenwinch.github.io/images/about-me-light.png'
+
     // Update dynamic About Me image
     const handleThemedImages = (isLightMode) => {
-        const aboutMeImage = getComputedStyle(document.documentElement).getPropertyValue('--md-sys-about-me-image');
-
         // Set the src attribute of the img element with the CSS variable value
-        document.getElementById('about-me-dynamic-image').src = aboutMeImage;
+        aboutMeImage.src = 'https://rhenwinch.github.io/images/about-me-' + (isLightMode ? 'light.png' : 'dark.png');
         
         const images = document.querySelectorAll('.invert');
         images.forEach(item => {
