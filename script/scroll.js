@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 navItems[i].classList.add('active');
 
                 currentIndex = sectionIndex - 1;
-                scrollToSection();
+                scrollToSection(currentIndex);
             });
         });
     }
