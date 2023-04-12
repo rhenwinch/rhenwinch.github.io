@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleTheme = () => {
         const themeStylesheet = document.getElementById('themeStylesheet');
         const isLightMode = themeStylesheet.href.includes('/css/theme/theme.light.css');
-        themeStylesheet.href = isLightMode ? '/css/theme/theme.dark.css' : '/css/theme/theme.light.css';
+        themeStylesheet.href = isLightMode ? './css/theme/theme.dark.css' : './css/theme/theme.light.css';
         
         // Set a delay
         setTimeout(() => {
